@@ -1,0 +1,84 @@
+// Interfaces
+interface Pet {
+    name: string
+    doesItShed: boolean
+}
+
+let dog: Pet = {
+    name: 'Fido',
+    doesItShed: true
+}
+
+
+interface FullName {
+    firstName: string
+    middleName: string
+    lastName: string
+}
+
+let myName: FullName = {
+    firstName: 'Dylan',
+    middleName: 'Chase',
+    lastName: 'Attal'
+}
+
+// console.log(myName.firstName + ' ' + myName.middleName + ' ' + myName.lastName)
+
+// Structural Typing or Duck Typing
+interface House {
+    numberOfRooms: number
+    squareFootage: number
+    isInFloodZone: boolean
+    nameOfStreet: string
+}
+
+let probablyAHouse = {
+    numberOfRooms: 4,
+    squareFootage: 2500,
+    isInFloodZone: false,
+    nameOfStreet: 'Carrollwood Village Drive',
+    // color: 'white'
+}
+
+function tellMeAboutYourHouse(home: House): void {
+    console.log(`My house has ${home.numberOfRooms} number of rooms ${home.squareFootage}
+    and ${home.isInFloodZone} and ${home.nameOfStreet}.`)
+}
+
+tellMeAboutYourHouse(probablyAHouse)
+
+
+// Structural Typing or Duck Typing
+interface Automobile {
+    make: string,
+    model: string,
+    numberOfWheels: number
+}
+
+class MyTruck implements Automobile {
+    constructor(make: string, model: string, numberOfWheels: number) {
+        this.make = make,
+        this.model = model,
+        this.numberOfWheels = numberOfWheels
+    }
+    make = 'Toyota'
+    model = 'Tacoma'
+    numberOfWheels = 4
+    color = 'white'
+    isDamaged = true
+}
+
+
+// Extending Interfaces
+interface Employee {
+    name: string
+    age: number
+}
+interface SoftwareDeveloper extends Employee {
+    favoriteLanguage: string
+}
+let dylan: SoftwareDeveloper = {
+    name: 'Dylan',
+    age: 27,
+    favoriteLanguage: 'TypeScript'
+}

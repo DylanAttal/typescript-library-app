@@ -1,0 +1,256 @@
+// Boolean
+let amIHungry = true
+// console.log(amIHungry)
+
+let today = 'Wednesday'
+function isTodayAWeekend (today) {
+    if (today === 'Saturday' || today === 'Sunday') {
+    return true
+    } else {
+    return false
+    }
+}
+// console.log(isTodayAWeekend(today))
+
+
+
+
+
+
+
+
+// String
+let aString = 'I am a string.'
+let anotherString = "Hey there, folks. I'm another string."
+let escapedCharacterString = 'There\'s an apostrophe in this string.'
+// console.log(escapedCharacterString)
+let teamName = 'The Tigers'
+// console.log(`My team is called ${teamName} and our score is 21.`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Number
+let score = 81
+let temperature = 98.7
+let smallNumber = 0.000009
+let moneyInMyPocket = 47.56
+// console.log(score + temperature)
+
+
+
+
+
+
+
+
+
+
+
+
+// Array
+let arrayOfStrings: string[] = ["hello", "world", "array", "string", "taco"]
+let anotherArrayOfStrings: Array<string> = ["string", "wow", "much strings", "such elements"]
+// arrayOfStrings.push(99)
+let arrOfBool: boolean[] = [true, false, false]
+// arrOfBool.push({ name: 'Dylan', age: 19 })
+let arr = [2, 5, 7]
+function squareNumbers (arr: number[]): number[] {
+    return arr.map(number => number * number)
+}
+// console.log(squareNumbers(arr))
+
+
+
+
+
+
+
+
+
+
+
+// Tuple
+let teamAndScore: [string, number] = ['The Wildcats', 14]
+// console.log(`I hope the hometeam ${teamAndScore[0]} beat the away team! They already
+// got two touchdowns, which means their score is ${teamAndScore[1]}!`)
+
+
+
+
+
+
+
+
+
+
+
+
+// Void
+function warnUser(): void {
+    console.log('Danger, Will Robinson.')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Any
+let arrayOfManyTypes: any[] = ['Hey there', 91, false, { 'tacos': 'yummy' }]
+
+
+
+
+
+
+
+
+
+// Null
+let newVariable: any = null
+// Undefined
+let unsureAboutType: any = undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Never
+const sing = function() {
+  while (true) {
+    console.log("Never gonna give you up")
+    console.log("Never gonna let you down")
+    console.log("Never gonna run around and desert you")
+    console.log("Never gonna make you cry")
+    console.log("Never gonna say goodbye")
+    console.log("Never gonna tell a lie and hurt you")
+  }
+}
+
+function error(message: string): never {
+    throw new Error(message)
+}
+
+
+
+
+
+
+
+
+
+
+
+// Enum
+enum State {
+    Alabama = 1,
+    Alaska = 2,
+    Arizona = 3,
+    Arkansas = 4,
+    California = 5,
+    Colorado = 6,
+    Connecticut = 7,
+    Delaware = 8,
+    Florida = 9,
+    Georgia = 10,
+    Hawaii = 11,
+    Idaho = 12,
+    Illinois = 13,
+    Indiana = 14,
+    Iowa = 15,
+    Kansas = 16,
+    Kentucky = 17,
+    Louisiana = 18,
+    Maine = 19,
+    Maryland = 20,
+    Massachusetts = 21,
+    Michigan = 22,
+    Minnesota = 23,
+    Mississippi = 24,
+    Missouri = 25,
+    Montana = 26,
+    Nebraska = 27,
+    Nevada = 28,
+    NewHampshire = 29,
+    NewJersey = 30,
+    NewMexico = 31,
+    NewYork = 32,
+    NorthCarolina = 33,
+    NorthDakota = 34,
+    Ohio = 35,
+    Oklahoma = 36,
+    Oregon = 37,
+    Pennsylvania = 38,
+    RhodeIsland = 39,
+    SouthCarolina = 40,
+    SouthDakota = 41,
+    Tennessee = 42,
+    Texas = 43,
+    Utah = 44,
+    Vermont = 45,
+    Virginia = 46,
+    Washington = 47,
+    WestVirginia = 48,
+    Wisconsin = 49,
+    Wyoming = 50
+}
+
+let myState: State = State.Florida
+// if (myState < State.Maine) {
+//     console.log('Your state does not start with an M')
+// }
+
+
+
+
+
+enum Day {
+    Monday = 1,
+    Tuesday = 2,
+    Wednesday = 3,
+    Thursday = 4,
+    Friday = 5,
+    Saturday = 6,
+    Sunday = 7
+}
+
+function isItABusinessDay(day: Day): void {
+    if (day < Day.Saturday) {
+        console.log('Today is a business day.')
+    } else {
+        console.log('Today is a weekend')
+    }
+}
+
+// isItABusinessDay(Day.Wednesday)
+// isItABusinessDay(Day.Sunday)
